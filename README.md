@@ -1,6 +1,8 @@
-# Financely
-Personal Finance Administration Web-App
+
+
 <h1>Financely</h1>
+Personal Finance Administration Web-App
+<br></br>
 It is going to be an administration web app for personal use, where you can track all your expenses, 
 incomes and investments in one place you would be able to keep track of your total balance and receive financial advices 
 based on your goals and your current financial status.
