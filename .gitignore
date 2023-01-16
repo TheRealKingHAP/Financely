@@ -13,7 +13,7 @@ dist-ssr
 *.local
 
 #Database
-data/db.json
+/data/db.json
 
 # Editor directories and files
 .vscode/*
