@@ -2,30 +2,26 @@
    "users": [
     {
     "id":1,
-    "profilePic":"https://i.pinimg.com/736x/16/ce/4c/16ce4c1cb3da4f02cec1d53ff3d185eb--manly-things-watch-deals.jpg",
-    "name":"Hector Aviña",
-    "email":"aviapech@hotmail.com",
-    "company":"HAP Technologies",
-    "country":"México",
-    "city":"Mérida",
+    "profilePic":"",
+    "name":"",
+    "email":"",
+    "company":"",
+    "country":"",
+    "city":"",
     "data":{
         "expenses": [
-            {"title":"Compra Rolex", "amount":300000, "details":"Compré un rolex submariner en EMWA Plaza Galerías Mérida" , "date":{"day":20,"month":"Diciembre", "year":"2023"}},
-            {"title":"Compra comida oxxo", "amount":150, "details":"2 hotdog, 1 refresco y una sabrita" , "date":{"day":12,"month":"Febrero", "year":"2023"}},
-            {"title":"Salida a cenar a Boston's", "amount":1000, "details":"Fuimos a cenar pizza a Boston's" , "date":{"day":5,"month":"Junio", "year":"2023"}}
+            {"title":"", "amount": 0, "details":"" , "date": ""},
         ],
         "incomes":[
-            {"title":"Venta de acciones", "amount":500000, "details":"Se vendieron las acciones compradas el año pasado de Taiwan Semiconductor's" , "date":{"day":15,"month":"Diciembre", "year":"2023"}},
-            {"title":"Sueldo", "amount":200000, "details":"" , "date":{"day":30,"month":"Enero", "year":"2023"}}
+            {"title":"", "amount":0, "details":"" , "date":""}
         ],
         "investments": [
-            {"symbol": "TSLA", "name": "Tesla, Inc", "opening-price": 452.53, "qty": 100, "date":{"day":14,"month":"Mayo", "year":"2022"}},
-            {"symbol": "NFLX", "name": "Netflix", "opening-price": 231.49, "qty": 100, "date":{"day":23,"month":"Febrero", "year":"2022"}}
+            {"symbol": "", "name": "", "opening-price": 0, "qty": 0, "date":""},
         ],
         "wallet": {
-            "Bank": 100000000,
-            "Cash": 10000,
-            "Crypto": 100000
+            "Bank": 0,
+            "Cash": 0,
+            "Crypto": 0
         }
     }
     }
