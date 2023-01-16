@@ -1,0 +1,297 @@
+:root{
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+  --app-background: #111111;
+  --sidebar-background: #222222;
+  --expanded-sidebar-width: 300px;
+  --collapse-sidebar-width: 50px;
+  --text-accent-color: #00e676;
+  --text-white-color: #f7f7f7f7;
+  --text-gray-color: #333333;
+}
+::-webkit-scrollbar{
+  width: 0px;
+}
+* {
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+ 
+}
+.app{
+  color: white;
+  display: flex;
+  flex: 1 1 0;
+  background-color: var(--app-background);
+  
+}
+.loadingScreen{
+  background-color: var(--app-background);
+  height: 100vh;
+  color: var(--text-accent-color);
+  font-weight: 500;
+  font-size: xx-large;
+  text-shadow: 0px 0px 20px #37ff9e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.loadingScreen .spinner{
+  margin-top: 2rem;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 1000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 1000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+button{
+  height: 50px;
+  width: 50px;
+}
+/*Side Bar*/
+.SideBar{
+  background-color: var(--sidebar-background);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
+  width: var(--collapse-sidebar-width);
+  transition: all ease-in-out 0.5s;
+}
+.SideBar.expanded{
+  width: var(--expanded-sidebar-width);
+}
+
+.sidebar-open-icon{
+  font-size: larger;
+  background-color: #00e676;
+  width: 100%;
+  cursor: pointer;
+  
+}
+.sidebar-close-icon{
+  margin-top: 20px;
+  font-size: larger;
+  width: 100%;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: all ease-in-out 0.5s;
+}
+.sidebar-close-icon.expanded{
+  transform: translateX(100px);
+}
+.BodyView{
+  padding: 2rem;
+  width: 100%;
+}
+.navBar{
+
+}
+.logo{
+ color: var(--text-accent-color);
+ font-weight: 600;
+ text-shadow: 0px 0px 25px #37ff9e;
+ font-size: larger;
+ text-align: center;
+ padding: 2rem;
+}
+.nav-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 2rem;
+  transition: all ease-in-out 0.5s;
+  transform: translateX(-27px);
+}
+.SideBar.expanded .nav-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  transform: translateX(0px);
+  padding: 2rem;
+}
+.nav-links a{
+  text-decoration: none;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: medium;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.nav-links .icon{
+  background-color: #333333;
+  border-radius: 15px;
+  padding: 10px;
+  transition: all ease-in-out 0.2s;
+}
+.nav-links .icon:hover{
+  background-color: #00b45d;
+  color: #f7f7f7;
+  border-radius: 10px;
+  padding: 10px;
+}
+.nav-links a span{
+  margin-left: 1rem;
+}
+.nav-links a.router-link-exact-active {
+  color: var(--text-accent-color);
+}
+.profile-tile{
+  padding: 2rem;
+  margin-top: 10rem;
+  transform: translateX(-30px) scale(90%);
+  transition: all ease-in-out 0.5s;
+}
+.SideBar.expanded .profile-tile{
+  padding: 2rem;
+  margin-top: 10rem;
+  transform: translateX(0px) scale(100%);
+}
+.profile-tile p {
+  font-size: small;
+}
+.profile-pic{
+  width: 50px;
+  border-radius: 100%;
+  border: 2px solid var(--text-accent-color);
+}
+.account-card{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.account-card p{
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: medium;
+}
+/*Wallet*/
+.wallet-list{
+  list-style: none;
+}
+.wallet-list li{
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.wallet-list li span{
+  color: #00e676;
+}
+
+/*Wallet Card Component*/
+
+.wallet-card{
+  margin: 2rem;
+  height: 10rem;
+  width: 15rem;
+  background-color: #333333;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.wallet-keys{
+  background-color: #333333;
+  border: none;
+  font-weight: 600;
+  font-size: larger;
+  color: white;
+  outline: none;
+  padding: 0rem 0.5em;
+}
+.amount{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: larger;
+  color: #f7f7f7;
+}
+.amount .icon{
+  margin-right: 1rem;
+  font-size: x-large;
+  background-color: #00bd6234;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--text-accent-color);
+}
+/*Expenses View*/
+.total{
+  font-size: larger;
+  font-weight: 500;
+}
+.total span{
+  color: #00e676;
+}
+/*.expenses-view{
+
+}*/
+/*Expenses Table Component*/
+.expenses-table-component{
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.expenses-table{
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.expenses-table tr{
+  background-color: #333333;
+}
+.expenses-table th{
+  text-align: start;
+  background-color: #222222;
+}
+.expenses-table th, .expenses-table td{
+  padding: 20px;
+}
+.expenses-table tbody tr{
+  border-bottom: 1px solid #555555;
+}
+
+.delete-expense-button{
+  font-size: large;
+  color: #ff626d;
+  cursor: pointer;
+}
